@@ -1,0 +1,7 @@
+system:
+  welcome: |
+    You are a helpful AI assistant. Answer step by step with context.
+
+user:
+  question: |
+    {{ question }}

@@ -1,0 +1,18 @@
+openrouter:
+  endpoint: "https://openrouter.ai/api/v1/chat/completions"
+  api_key_env: OPENROUTER_API_KEY
+  model: "gpt-3.5-turbo"
+  temperature: 0.5
+
+llamaindex:
+  pinecone_api_key_env: PINECONE_API_KEY
+  pinecone_env: "us-west1-gcp"
+  pinecone_index: "agent-index"
+  model_endpoint: ${openrouter.endpoint}
+  model_api_key_env: ${openrouter.api_key_env}
+  model: ${openrouter.model}
+  temperature: ${openrouter.temperature}
+
+langgraph:
+  endpoint: "https://langgraph.openrouter.ai/v1/graphql"
+  api_key_env: OPENROUTER_API_KEY
